@@ -17,8 +17,11 @@
 - PostgreSQL
 - Redis
 - Poetry (для управления зависимостями)
+- Docker и Docker Compose (опционально)
 
-## Установка
+## Установка и запуск
+
+### Вариант 1: Локальный запуск
 
 1. Клонируйте репозиторий:
 ```bash
@@ -54,11 +57,25 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 alembic upgrade head
 ```
 
-## Запуск
-
+5. Запустите приложение:
 ```bash
 uvicorn main:app --reload
 ```
+
+### Вариант 2: Запуск с Docker
+
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/yourusername/url-shortener.git
+cd url-shortener
+```
+
+2. Запустите приложение с помощью Docker Compose:
+```bash
+docker-compose up --build
+```
+
+Приложение будет доступно по адресу http://localhost:8000
 
 ## API Endpoints
 
